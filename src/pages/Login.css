@@ -65,6 +65,6 @@
   margin-bottom: 20px;
 }
 
-#login::selection {
+#login *::selection {
   background-color: rgb(126, 126, 220);
 }
