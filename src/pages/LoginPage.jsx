@@ -28,9 +28,11 @@ const LoginPage = ({ setIsLogin }) => {
       try {
         if (values.password === PASSWORD) {
           let res = await axios.post("https://reqres.in/api/login", values);
-          localStorage.setItem(TOKEN, res.data.token);
           setIsLogin(true);
           navigate("/");
+          localStorage.setItem(TOKEN, res.data.token);
+        } else {
+          toast.error("Password not found");
         }
       } catch (err) {
         toast.error("User not found");
