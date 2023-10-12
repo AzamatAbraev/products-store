@@ -51,8 +51,8 @@ const ProductPage = () => {
       <div className="container-lg">
         <h1 className="product-title">Products</h1>
         <p className="alert alert-info">
-          {sortedProducts.length !== 0
-            ? `Total Products: ${sortedProducts.length}`
+          {total.length !== 0
+            ? `Total Products: ${total.length}`
             : "No Products Available"}
         </p>
         <InputGroup className="mb-4">
